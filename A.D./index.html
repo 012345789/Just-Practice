@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>console.log("loading scripts");</script>
+        <script src="jsontoarray.js"></script>
+    </head>
+
+    <body>
+        <h3>
+            JSON to Array
+        </h3>
+
+        <ul>
+            <li>
+                Return value of the function returns many arrays.
+            </li>
+            <li>
+                When would generateArray(input) not have an output?
+                <p>
+                    No prefix AND the input's current value is not nested
+                </p>
+            </li>
+            <li>
+                Check for: 
+                <ol>
+                    <li>
+                        Values passed from deeper recursion levels. This means the value must be a nested object
+                    </li>
+                    <li>
+                        Current key has a prefix (BASE CASE)
+                    </li>
+                    <li>
+                        Current key has no prefix and value is not nested (BASE CASE 2). In this case, do nothing.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                Current algorithm doesn't account for outputs of 1+ arrays  passed from deeper recursion levels
+            </li>
+            <li>
+                Returning a value inside a for loop will stop the for loop. Later array values do not get evaluated as  planned
+            </li>
+        </ul>
+
+
+    </body>
+
+</html>
