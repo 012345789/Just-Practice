@@ -25,7 +25,7 @@
               next_results = generateArray(obj[key]);
               if (next_results) { 
                   for (var j = 0; j < next_results.length; j++) {
-                    console.log(j, next_results.length);
+                    console.log(j, next_results.length, next_results[j]);
                     next_results[j][1] = key + '/' + next_results[j][1];
                     // orderedArray = orderedArray.concat(next_results[j]);
                     orderedArray.push([prefix, key, value]);
@@ -36,7 +36,7 @@
       }
 
       console.log('outside for loop:', orderedArray.toString());
-      return [orderedArray];
+      return orderedArray;
       
   }
   
@@ -64,5 +64,7 @@
   var json3 = {'$simplePrefixKey' : '23'};
 
   generateArray(json2);
+
+  // console.log([1,2,[3,4], {'test': 'value'}].toString());
 
 
